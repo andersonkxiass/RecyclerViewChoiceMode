@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Animals</string>
+
+    <string name="selection_count"> Selected </string>
+</resources>

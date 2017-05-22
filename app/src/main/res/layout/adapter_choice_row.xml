@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="custom"
+            type="br.com.anderson.recyclerviewchoicemode.viewmodel.GroupChoiceResource" />
+
+        <variable
+            name="model"
+            type="br.com.anderson.recyclerviewchoicemode.viewmodel.AnimalsRowViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_margin="2dp"
+        android:gravity="center_vertical">
+
+        <android.support.v7.widget.AppCompatCheckedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@{model.selected}"
+            android:text="@{model.animals.getName()}"
+            app:choiceType="@{model.choiceType}"
+            app:state="@{model.modeState}" />
+    </LinearLayout>
+</layout>
